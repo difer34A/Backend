@@ -1,0 +1,28 @@
+const people = [
+    {
+        name: 'John',
+        hobby : "guitar",
+        age: 30,
+        score : 100,
+    },
+    {
+        name: 'bataa',
+        hobby : "videos",
+        age: 10,
+        score : 90,
+    },
+]
+
+// 1
+var temp = people[1].score;
+
+people[1].score = people[0].score;
+people[0].score = temp;
+
+// 2
+for(var i=0; i<people.length; i++){
+    console.log("Hello my name is " + people[i].name + ". And i love " + people[i].hobby);
+    people[i].score -= 40;
+}
+
+console.log(people);
