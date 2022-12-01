@@ -1,0 +1,19 @@
+const animals = [
+    {name: 'cat', power: 200, speed: 5}, 
+    {name: 'dragon', power: 1000000, speed: 20},
+    {name: 'rabbit', power: 1, speed: 15}, 
+    {name: 'dog', power: 250, speed: 4},
+    {name: 'human', power: 1000, speed: 3}
+]
+
+var strongest_ind=0;
+var pow=0, spd=0;
+
+for(var i = 0; i<animals.length; i++){
+    if(animals[i].power > animals[strongest_ind].power) strongest_ind = i;
+    pow+=animals[i].power;
+    spd+=animals[i].speed;
+}
+console.log("strongest animal is " + animals[strongest_ind].name)
+console.log("AVG power: " + pow/animals.length)
+console.log("AVG speed: " + spd/animals.length)
